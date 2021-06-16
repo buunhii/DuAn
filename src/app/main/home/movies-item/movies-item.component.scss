@@ -1,0 +1,132 @@
+.film {
+    padding: 20px 10px 0;
+    margin-bottom: 25px;
+    cursor: pointer;
+    a {
+        text-decoration: none;
+        color: #000;
+        cursor: pointer;
+        transition: all 0.2s;
+        .filmThumbnail {
+            margin-bottom: 10px;
+            position: relative;
+            border-radius: 4px;
+            background-position: center, 0 0;
+            background-size: 100% auto;
+            background-repeat: no-repeat, repeat-y;
+            img {
+                border-radius: 4px;
+            }
+            .movie-img {
+                min-height: 350px;
+            }
+            .hoverInfo {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: 0 0;
+                background: linear-gradient(to top, #000, transparent 100%);
+                top: 0;
+                border-radius: 4px;
+            }
+            .playTrailer {
+                width: 60px;
+                height: 60px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 3;
+                background: 0 0;
+                border: none;
+            }
+            &:hover .playTrailer {
+                opacity: 0.7;
+            }
+        }
+        .avgPoint {
+            font-family: "SF Medium";
+            font-size: 16px;
+            background-color: rgba(12, 27, 54, 0.8);
+            border: 1px solid #1f2e46;
+            border-radius: 4px;
+            padding: 2px;
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            color: #fff;
+            width: 54px;
+            text-align: center;
+            line-height: 1.1;
+            p {
+                margin: 0 !important;
+                text-align: center;
+                img {
+                    display: inline-block;
+                    max-width: 8px;
+                }
+                .half {
+                    max-width: 10px;
+                }
+            }
+            .txtPoint {
+                text-align: center;
+                transform: scaleY(1.2);
+            }
+        }
+    }
+    .showHover {
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.2s;
+    }
+    &:hover .showHover {
+        visibility: visible;
+        opacity: 1;
+        transition: all 0.2s;
+    }
+    .hideHover {
+        visibility: visible;
+        opacity: 1;
+        transition: all 0.2s;
+    }
+}
+.info {
+    position: relative;
+    .nameFilm {
+        font-weight: bold;
+        height: 42px;
+        max-height: 42px;
+        font-size: 18px;
+        color: #000;
+        line-height: 22px;
+        margin-bottom: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        .ageType {
+            font-size: 14px;
+            background-color: #fb4226;
+            border-radius: 4px;
+            padding: 0 5px;
+            color: #fff;
+            min-width: 33px;
+            text-align: center;
+            display: inline-block;
+            margin-right: 8px;
+        }
+    }
+    .buyNow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        border-radius: 4px;
+        color: #fff;
+        font-size: 18px !important;
+        padding: 10px;
+        text-align: center;
+        background: #fb4226;
+        background: linear-gradient(to left, #fb4226, #ce3017 100%);
+    }
+}

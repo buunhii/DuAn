@@ -1,0 +1,81 @@
+<div class="row grayBack" id="newsblock">
+  <div class="col-12 block mainMaxWidth" id="homeNews">
+    <div id="sliderAdsNews" class="wrapSlick banner-ads"></div>
+    <ul
+      class="nav nav-tabs navCenter"
+      role="tablist"
+      style="text-align: center"
+    >
+      <li class="nav-item" role="presentation">
+        <a
+          role="tab"
+          data-toggle="tab"
+          data-target="#showingNews"
+          aria-expanded="false"
+          (click)="ChonLoaiTin('DienAnh')"
+          >Điện Ảnh 24h</a
+        >
+        <div class="wing wingLeft"></div>
+        <div class="wing wingRight"></div>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a
+          role="tab"
+          data-toggle="tab"
+          data-target="#showingReview"
+          aria-expanded="true"
+          (click)="ChonLoaiTin('Review')"
+          >Review</a
+        >
+        <div class="wing wingLeft"></div>
+        <div class="wing wingRight"></div>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a
+          role="tab"
+          data-toggle="tab"
+          data-target="#showingPromotion"
+          aria-expanded="false"
+          (click)="ChonLoaiTin('KhuyenMai')"
+          >Khuyến Mãi</a
+        >
+        <div class="wing wingLeft"></div>
+        <div class="wing wingRight"></div>
+      </li>
+    </ul>
+    <div class="tab-content" [ngSwitch]="loaiTinTuc">
+      <div
+        id="showingNews"
+        class="tab-pane fade active in"
+        *ngSwitchCase="'DienAnh'"
+      >
+        <div class="col-12 col-news news">
+          <app-show-news></app-show-news>
+          <div class="wrapButtonSeeMoreNews">
+            <button class="btnViewMore" data-type="listNews">XEM THÊM</button>
+          </div>
+        </div>
+      </div>
+      <div id="showingReview" class="tab-pane fade" *ngSwitchCase="'Review'">
+        <div class="col-12 col-news news">
+          <app-show-review></app-show-review>
+          <div class="wrapButtonSeeMoreNews">
+            <button class="btnViewMore" data-type="listNews">XEM THÊM</button>
+          </div>
+        </div>
+      </div>
+      <div
+        id="showingPromotion"
+        class="tab-pane fade"
+        *ngSwitchCase="'KhuyenMai'"
+      >
+        <div class="col-12 col-news news">
+          <app-show-promotion></app-show-promotion>
+          <div class="wrapButtonSeeMoreNews">
+            <button class="btnViewMore" data-type="listNews">XEM THÊM</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

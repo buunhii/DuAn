@@ -1,0 +1,95 @@
+<div class="row session-main grayBack" id="cinemablock">
+  <div class="col-12 block mainMaxWidth" id="homeCinemaComplex">
+    <div class="wrapSlick banner-ads" id="sliderAdsCinema"></div>
+    <div class="noelBand"></div>
+    <ul class="nav nav-tabs listPCinemas accordion" id="parentListPCinemas">
+      <li
+        class="liPCinema"
+        *ngFor="let pCinema of parentListCinemas; let i = index"
+      >
+        <a
+          (click)="showCinema(pCinema.maHeThongRap)"
+          [ngClass]="{
+            active:
+              selectedHomePCinema === pCinema.maHeThongRap ||
+              (i === 0 && selectedHomePCinema == '')
+          }"
+          ><img src="{{ pCinema.logo }}" alt=""
+        /></a>
+      </li>
+    </ul>
+    <div class="tab-content float-left" id="listCinemas" style="height: 705px">
+      <div class="">
+        <div
+          class="cinema"
+          *ngFor="let cinema of listCinemas; let i = index"
+          (click)="ShowTimeMovie(cinema.maCumRap)"
+          [ngClass]="{
+            active:
+              (i === 0 && setSelectedCinema == '') ||
+              setSelectedCinema === cinema.maCumRap
+          }"
+        >
+          <img
+            src="https://s3img.vcdn.vn/123phim/2021/01/bhd-star-bitexco-16105952137769.png"
+            class="cinemaImage"
+            alt=""
+          />
+          <div class="wrapInfo">
+            <span class="nameMovieCinema">
+              <span class="colorCinema BHD Star"> {{ cinema.tenCumRap }} </span>
+            </span>
+            <span class="infoMovieCinema">
+              {{ cinema.diaChi }}
+            </span>
+            <span class="redDetail showingDetailCinema">
+              <a href="">[chi tiết]</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="listMovies" style="height: 705px">
+      <ng-template #MovieListPage>
+        <div class="movie__wrapMovie" *ngFor="let movie of MovieList">
+          <div class="movie__content">
+            <img src="{{ movie.hinhAnh }}" alt="" />
+            <div class="movie__info">
+              <p class="movie__title">
+                <span
+                  class="ageType"
+                  style="font-weight: 500; font-size: 18px"
+                  >{{ movie.tenPhim }}</span
+                >
+              </p>
+              <p class="movie__moreInfo">120 phút</p>
+            </div>
+          </div>
+          <div class="movie__showTimes" style="margin-top: 20px">
+            <h5>2D Digital</h5>
+            <div class="row">
+              <div
+                class="col-3"
+                *ngFor="let showTime of renderShowTimeMovieToday(movie)"
+              >
+                <button
+                  class="btn"
+                  routerLink="checkOut/{{ showTime.maLichChieu }}"
+                >
+                  {{ showTime.ngayChieuGioChieu | date: "hh:mm a" }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+
+      <div *ngIf="MovieList.length < 1; else MovieListPage">
+        <div class="emptySession">
+          <p>Không có suất chiếu</p>
+        </div>
+      </div>
+    </div>
+    <div class="noelBand"></div>
+  </div>
+</div>

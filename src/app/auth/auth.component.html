@@ -1,0 +1,23 @@
+<!-- <div class="bg-secondary px-4 py-2 d-flex justify-content-center text-white">
+  <a class="mr-4" routerLink="/signin">Signin</a>
+  <a routerLink="/signup">Signup</a>
+</div> -->
+<div class="content" id="mainContent">
+  <div class="container-fluid">
+    <div class="signin signin--vertical">
+      <div class="signin--wrapper">
+        <!-- <h2 class="signin-title">ĐĂNG NHẬP</h2> -->
+        <img
+          class="signin--header"
+          src="https://tix.vn/app/assets/img/login/group@2x.png"
+          ng-click="backToHomepage(0)"
+        />
+        <div class="signin--message">
+          Đăng nhập để được nhiều ưu đãi, mua vé<br />và bảo mật thông tin!
+        </div>
+        <router-outlet></router-outlet>
+        <div class="signin-close" ng-click="backToHomepage(0)"></div>
+      </div>
+    </div>
+  </div>
+</div>

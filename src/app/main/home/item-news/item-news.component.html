@@ -1,0 +1,25 @@
+<div class="col-news col-md-6 col-12 abv news" style="float: left">
+  <div class="thumbnailGeneral bigThumbnail newsThumbnail">
+    <a>
+      <img [src]="Tin.HinhAnh" />
+    </a>
+  </div>
+  <a>
+    <p class="newsTitle">
+      {{ Tin.TieuDeTinTuc }}
+    </p>
+  </a>
+  <p class="newsDescription">
+    {{ Tin.MoTa }}
+  </p>
+  <div class="blockIconFacebook">
+    <div class="wrapIcon like" data-id="7965" data-type="1">
+      <img class="iconFacebook postLike" [src]="Tin.Like" />
+      <p class="amount like">0</p>
+    </div>
+    <div class="wrapIcon comment">
+      <img [src]="Tin.Comment" alt="" class="iconFacebook postCmt" />
+      <p class="amount comment">0</p>
+    </div>
+  </div>
+</div>

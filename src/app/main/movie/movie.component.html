@@ -1,0 +1,11 @@
+<!-- <app-movie-info [movieShowTimes]="movieShowTimes"></app-movie-info>
+<app-showtimes></app-showtimes> -->
+<div class="background">
+  <app-movie-info [movieShowTimes]="movieShowTimes"></app-movie-info>
+  <app-showtimes
+    [cinemaShowTimes]="cinema"
+    [movieShowTimes]="movieShowTimes"
+    (handleChangeShowTimeByParent)="changeParentCinema($event)"
+    (handleChangeShowTimeByDate)="renderShowTime($event)"
+  ></app-showtimes>
+</div>

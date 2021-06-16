@@ -1,0 +1,114 @@
+<div id="mainContent" class="container-fluid">
+  <div class="row">
+    <div
+      class="col-sm-12 block dark"
+      id="detailMain"
+      style="background-color: rgb(10, 32, 41)"
+    >
+      <div id="detailMainTop" class="backgroundMain">
+        <div class="styleBlur">
+          <iframe
+            id=""
+            width="100%"
+            height="100%"
+            allowfullscreen
+            frameborder="0"
+          ></iframe>
+          <button
+            id="slickPlayYoutubeMobile"
+            class="playTrailerDetail showHover slick"
+          >
+            <img src="../../../../assets/img/play-video.png" alt="" />
+          </button>
+          <img
+            [src]="movieShowTimes.hinhAnh"
+            alt=""
+            class="posterLandscapeFilm"
+          />
+        </div>
+        <div
+          class="styleGradient"
+          style="
+            background: linear-gradient(
+              to top,
+              rgb(10, 32, 41),
+              transparent 100%
+            );
+          "
+        ></div>
+        <div class="detailMainInfo mainMaxWidth2">
+          <div class="col-sm-3 col-xs-4 filmPosterTop">
+            <div class="row posterMain">
+              <img
+                [src]="movieShowTimes.hinhAnh"
+                style="height: 350px; border-radius: 4px"
+                alt=""
+              />
+              <button class="playTrailerDetail showHover">
+                <img src="../../../../assets/img/play-video.png" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="col-sm-5 infoMain">
+            <div>
+              <span class="detailMainInfo1">{{
+                movieShowTimes.ngayKhoiChieu | date: "dd.MM.yyyy"
+              }}</span>
+              <br />
+            </div>
+            <div class="parentInfo2">
+              <span class="detailMainInfo2">{{ movieShowTimes.tenPhim }}</span>
+            </div>
+            <div>
+              <span class="detailMainInfo1">
+                100 phút - 0 IMDb - 2D/Digital
+              </span>
+            </div>
+            <a class="btn buyNow">MUA VÉ</a>
+          </div>
+          <div class="col-sm-2 circleStar">
+            <div class="circleSum"></div>
+            <div id="circlePercent" class="c100">
+              <div class="circleBorder"></div>
+              <span> {{ movieShowTimes.danhGia }} </span>
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+            </div>
+            <div id="starMain" class="row star" style="margin-top: 10px">
+              <img src="../../../../assets/img/star1.png" alt="" />
+              <img src="../../../../assets/img/star1.png" alt="" />
+              <img src="../../../../assets/img/star1.png" alt="" />
+              <img src="../../../../assets/img/star1.2.png" alt="" />
+            </div>
+            <div class="row" style="margin-top: 10px; margin-left: 10px">
+              <span class="detailMainInfo1"> 171 người đánh giá </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="mainMaxWidth2 contentMain">
+        <div class="detailMainInfoMobile mainMaxWidth2">
+          <div class="row">
+            <div class="col-sm-12 infoMain">
+              <div>
+                <span class="detailMainInfo1 ng-binding">09.04.2021</span><br />
+              </div>
+              <div>
+                <span class="detailMainInfo2 ng-binding"
+                  >Bàn Tay Diệt Quỷ - Evil Expeller (C16)</span
+                ><br />
+              </div>
+              <div>
+                <span class="detailMainInfo1 ng-binding"
+                  >129 phút - 0 IMDb - 2D/Digital</span
+                ><br />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</div>

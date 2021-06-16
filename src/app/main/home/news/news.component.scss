@@ -1,0 +1,107 @@
+.row:after,
+.row:before {
+    display: table;
+    content: " ";
+}
+.row:after {
+    clear: both;
+}
+.nav:before,
+.nav:after {
+    display: table;
+    content: " ";
+}
+.banner-ads {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    cursor: pointer;
+}
+
+#homeNews {
+    background: url(../../../../assets/img/back-news.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-top: 120px;
+    .navCenter {
+        text-align: center;
+        border: none;
+        margin-bottom: 30px;
+    }
+    .navCenter a {
+        font-size: 20px;
+        line-height: 24px;
+        height: 24px;
+    }
+    li {
+        .active {
+            font-size: 24px;
+            color: #fa5238;
+            transition: all 0.2s;
+        }
+    }
+    .nav-tabs.navCenter li {
+        display: inline-block;
+        float: none;
+    }
+    .tab-pane .wrapButtonSeeMoreNews {
+        margin-bottom: 35px;
+        float: left;
+        width: 100%;
+        .btnViewMore {
+            font-size: 14px;
+            color: #949494;
+            border: 1px solid #949494;
+            border-radius: 4px;
+            text-align: center;
+            background: 0 0;
+            padding: 7px 25px;
+            transition: all .2s;
+            margin: auto;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        &:hover .btnViewMore {
+            background-color: #fb4226;
+            border-color: #fb4226;
+            color: #fff!important;
+        }
+    }
+}
+
+.navCenter {
+    li {
+        display: inline-block;
+        float: none;
+        a {
+            background-color: transparent;
+            border: none;
+            color: #000;
+            transition: all 0.2s;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+}
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+.nav {
+    justify-content: center;
+}
+.mainMaxWidth {
+    max-width: 940px;
+    float: none;
+    margin: auto;
+    clear: both;
+}
+.block {
+    padding-left: 0;
+    padding-right: 0;
+}

@@ -1,0 +1,263 @@
+
+#detailMain #detailMainTop {
+    position: relative;
+}
+.block {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.dark {
+    .detailMainInfo1 {
+        color: #e9e9e9;
+    }
+    .detailMainInfo2 {
+        color: #e9e9e9;
+    }
+    .navCenter a {
+        color: #fff;
+    }
+}
+
+#detailMain {
+    .styleBlur {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        button {
+            display: none;
+        }
+        iframe {
+            display: none;
+        }
+
+    }
+    .styleGradient {
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+    .contentMain {
+        transform: translate(0, -70px);
+    }
+    .detailMainInfoMobile .detailMainInfo1 {
+        color: #9b9b9b !important;
+    }
+    .detailMainInfoMobile .detailMainInfo2 {
+        font-family: 'SF Medium';
+        font-size: 20px;
+    }
+    .dark .detailMainInfo1 {
+        color: #e9e9e9;
+    }
+    .dark .detailMainInfo2 {
+        color: #e9e9e9;
+    }
+    .navCenter {
+        margin-bottom: 0;
+        .active {
+            a {
+                color: #fb4226;
+                font-size: 20px;
+            }
+        }a {
+            font-size: 18px;
+            line-height: 24px;
+            height: 24px;
+        } 
+    }
+    .dark .navCenter a {
+        color: #fff;
+    }
+
+}
+.nav-tabs.navCenter {
+    text-align: center;
+    border: none;
+    margin-bottom: 30px;
+    li {
+        display: inline-block;
+        float: none;
+         a {
+            background-color: transparent;
+            border: none;
+            transition: all .2s;
+            cursor: pointer;
+        }
+    }
+    li.active a {
+        color: #fa5238;
+    }
+}
+.nav:after,.nav:before{
+    display: table;
+    content: " ";
+}
+.nav:after{clear: both;}
+
+#detailMainTop {
+    .styleBlur {
+        .posterLandscapeFilm {
+            filter: blur(15px);
+            margin: -11px 0 -5px -10px;
+            width: calc(100% + 5px);
+        }
+    }
+}
+#detailMain #detailMainTop {
+    .detailMainInfo {
+        position: absolute;
+        top: 15%;
+        width: 100%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        .filmPosterTop {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            max-width: 220px;
+            .posterMain {
+                border-radius: 4px;
+              //  padding-top: 147.90697674%;
+                background-position: center, 0 0;
+                background-size: 100% auto;
+                background-repeat: no-repeat, repeat-y;
+                .showHover {
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: all 0.2s;
+                }
+                &:hover .showHover {
+                    visibility: visible;
+                    opacity: 1;
+                    transition: all 0.2s;
+                }
+                .playTrailerDetail {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 3;
+                    background: 0 0;
+                    border: none;
+                }
+            }
+        }
+        .infoMain {
+            float: none;
+            clear: both;
+            position: absolute;
+            top: 40%;
+            transform: translateY(-50%);
+            left: 27%;
+            .detailMainInfo1 {
+                font-size: 17px;
+            }
+            .detailMainInfo2 {
+                font-size: 27px;
+                font-family: "SF Medium";
+                position: relative;
+            }
+            .buyNow{
+                top: 0;
+                left: 0;
+                display: block;
+                width: 40%;
+                border-radius: 4px;
+                color: #fff;
+                font-size: 18px !important;
+                padding: 5px;
+                text-align: center;
+                background: #fb4226;
+                margin-top: 10px;
+   
+            }
+            &:hover .buyNow{
+ 
+                background: linear-gradient(to left, #fb4226, #ce3017 100%);
+            }
+        }
+        .circleStar {
+            text-align: center;
+            padding: 0;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            .c100 {
+                position: relative;
+                font-size: 126px;
+                width: 1em;
+                height: 1em;
+                border-radius: 50%;
+                margin: auto;
+                background-color: rgba(0, 0, 0, 0.4);
+                .circleBorder {
+                    width: 1em;
+                    height: 1em;
+                    background: 0 0;
+                    border: 7.5px solid #3a3a3a;
+                    border-radius: 50%;
+                    position: absolute;
+                }
+                span {
+                    position: absolute;
+                    width: 100%;
+                    z-index: 1;
+                    left: 0;
+                    top: 0;
+                    line-height: 2.4em;
+                    font-size: 0.42em;
+                    color: #fff;
+                    display: block;
+                    text-align: center;
+                    white-space: nowrap;
+                    transition-property: all;
+                    transition-duration: 0.2s;
+                    transition-timing-function: ease-out;
+                }
+                .slice {
+                    position: absolute;
+                    width: 1em;
+                    height: 1em;
+                    clip: rect(0, 1em, 1em, 0.5em);
+                    .bar {
+                        position: absolute;
+                        border: 0.06em solid #7ed321;
+                        width: 1em;
+                        height: 1em;
+                        clip: rect(0, 0.5em, 1em, 0);
+                        border-radius: 50%;
+                        transform: rotate(0);
+                    }
+                    .fill {
+                        position: absolute;
+                        border: 0.06em solid #7ed321;
+                        width: 1em;
+                        height: 1em;
+                        clip: rect(0, 0.5em, 1em, 0);
+                        border-radius: 50%;
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+            .star {
+                margin: auto;
+                margin-left: 30px;
+                img {
+                    max-width: 25px;
+                }
+            }
+        }
+    }
+}
+
+.mainMaxWidth2 {
+    max-width: 870px;
+    float: none;
+    margin: auto;
+    clear: both;
+}

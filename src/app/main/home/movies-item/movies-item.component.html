@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="row">
+    <div
+      *ngFor="let movie of movieList | slice: 0:8"
+      class="col-md-4 col-lg-3 col-sm-6 wrapFilm"
+    >
+      <!-- <div class="card">
+        <img class="card-img-top" [src]="movie.hinhAnh" alt="" />
+        <div class="card-body">
+          <h4 class="card-title">{{ movie.tenPhim }}</h4>
+          <p class="card-text">{{ movie.moTa }}</p>
+          <button routerLink="movie/{{ movie.maPhim }}">Mua Vé</button>
+        </div>
+        class="col-md-4 col-lg-3 col-sm-6"
+      </div> -->
+      <div class="film">
+        <a href="">
+          <div class="filmThumbnail">
+            <img class="movie-img" [src]="movie.hinhAnh" alt="" />
+            <div class="hoverInfo showHover showingDetail">
+              <button class="playTrailer">
+                <img src="../../../../assets/img/play-video.png" alt="" />
+              </button>
+            </div>
+            <span class="avgPoint">
+              <p class="txtPoint">{{ movie.danhGia }}</p>
+              <p>
+                <img
+                  class="smallStar"
+                  src="../../../../assets/img/star1.png"
+                  alt=""
+                />
+                <img
+                  class="smallStar"
+                  src="../../../../assets/img/star1.png"
+                  alt=""
+                />
+                <img
+                  class="smallStar"
+                  src="../../../../assets/img/star1.png"
+                  alt=""
+                />
+                <img
+                  class="smallStar"
+                  src="../../../../assets/img/star1.png"
+                  alt=""
+                />
+                <img
+                  class="half"
+                  src="../../../../assets/img/star1.2.png"
+                  alt=""
+                />
+              </p>
+            </span>
+          </div>
+        </a>
+        <div class="info">
+          <div class="nameFilm">
+            {{ movie.tenPhim }}
+          </div>
+          <div class="infoFilm"></div>
+          <div class="showHover">
+            <a
+              class="buyNow showingDetail"
+              routerLink="movie/{{ movie.maPhim }}"
+              >MUA VÉ</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

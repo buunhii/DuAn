@@ -1,0 +1,362 @@
+<!-- <div class="d-flex bg-secondary justify-content-between px-5 py-2">
+  <div>CyberMovie</div>
+  <div>
+    <a>Lich Chieu</a>
+    <a>Cụm Rạp</a>
+  </div>
+  <div>
+    <p *ngIf="currentUser">
+      {{ currentUser.hoTen }}
+    </p>
+    //Hiển thị thông tin user khi đã đăng nhập 
+   <a *ngIf="!currentUser" routerLink="/signin"> Đăng Nhập </a> -->
+<!-- </div>
+</div>
+<router-outlet></router-outlet> -->
+<header style="height: 60px">
+  <div id="navbarHeader">
+    <a class="left" href="">
+      <img
+        class="webLogo"
+        src="https://tix.vn/app/assets/img/icons/web-logo.png"
+        alt=""
+      />
+    </a>
+    <div class="center" id="headMenu">
+      <a
+        href="filmblock"
+        class="menu titleDisplay homeMovies white"
+        data-scroll="homeMovies"
+        >Lịch Chiếu</a
+      >
+      <a
+        href="cinemablock"
+        class="menu titleDisplay homeCinemaComplex white"
+        data-scroll="homeCinemaComplex"
+        >Cụm rạp</a
+      >
+      <a
+        href="newsblock"
+        class="menu titleDisplay homeNews white"
+        data-scroll="homeNews"
+        >Tin Tức</a
+      >
+      <a
+        href="appblock"
+        class="menu titleDisplay wrapHomeApp white"
+        data-scroll="wrapHomeApp"
+        >Ứng dụng</a
+      >
+    </div>
+    <div class="right">
+      <div id="account" class="imgCircle loginUser">
+        <button
+          class="menu titleDisplay"
+          *ngIf="!currentUser"
+          routerLink="/signin"
+        >
+          <img src="https://tix.vn/app/assets/img/avatar.png" alt="" />
+          Đăng Nhập
+        </button>
+        <button class="menu titleDisplay" routerLink="/signup">Đăng Ký</button>
+        <!-- <div class="dropdown" *ngIf="currentUser">
+          <button
+            class="btn text-black"
+            type="button"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
+          >
+            <img src="https://tix.vn/app/assets/img/avatar.png" alt="" />
+            <strong>{{ currentUser.taiKhoan }}</strong>
+          </button> -->
+        <div class="dropdown">
+          <button
+            class="btn btn-light dropdown-toggle"
+            type="button"
+            data-toggle="dropdown"
+            *ngIf="currentUser"
+          >
+            <img src="https://tix.vn/app/assets/img/avatar.png" alt="" />
+            <strong>{{ currentUser.taiKhoan }}</strong>
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu text-center">
+            <li><a href="#" (click)="handleLogout()">Đăng Xuất</a></li>
+          </ul>
+        </div>
+        <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#" (click)="handleLogout()"
+              >Đăng Xuất</a
+            >
+          </div> -->
+      </div>
+    </div>
+  </div>
+  <!-- </div> -->
+</header>
+<router-outlet></router-outlet>
+<footer>
+  <div class="col-12 block" id="footer">
+    <div class="mainMaxWidth">
+      <div class="row">
+        <div class="col-sm-4 col-12">
+          <p class="title hideOnMobile">TIX</p>
+          <div
+            class="col-sm-6 col-md-6 noPaddingLeft fontSizeP"
+            style="float: left"
+          >
+            <a href="https://tix.vn/faq">FAQ</a>
+            <a href="https://tix.vn/brand-guideline/">Brand Guidelines</a>
+          </div>
+          <div
+            class="col-sm-6 col-md-6 noPaddingLeft fontSizeP"
+            style="float: left"
+          >
+            <a href="https://tix.vn/thoa-thuan-su-dung">Thỏa thuận sử dụng</a>
+            <a href="https://tix.vn/chinh-sach-bao-mat">Chính sách bảo mật</a>
+          </div>
+        </div>
+        <div class="col-sm-4 col-12">
+          <p class="title">ĐỐI TÁC</p>
+          <div class="row col-sm-12 col-xs-12 linePartner">
+            <a target="_blank" href="https://www.cgv.vn/" title="CGV">
+              <img
+                class="iconConnect"
+                src="https://tix.vn/app/assets/img/icons/cgv.png"
+                style="background-color: #fff"
+              />
+            </a>
+            <a target="_blank" href="http://bhdstar.vn" title="BHD">
+              <img
+                class="iconConnect"
+                src="https://tix.vn/app/assets/img/icons/bhd.png"
+              />
+            </a>
+            <a target="_blank" href="http://galaxycine.vn" title="Galaxy">
+              <img
+                class="iconConnect"
+                src="https://tix.vn/app/assets/img/icons/galaxycine.png"
+              />
+            </a>
+            <a target="_blank" href="http://cinestar.com.vn" title="Cinestar">
+              <img
+                class="iconConnect"
+                src="https://tix.vn/app/assets/img/icons/cinestar.png"
+              />
+            </a>
+            <a
+              target="_blank"
+              href="http://lottecinemavn.com"
+              title="Lotte Cinema"
+            >
+              <img
+                class="iconConnect"
+                ng-src="https://s3img.vcdn.vn/123phim/2018/09/404b8c4b80d77732e7426cdb7e24be20.png"
+                src="https://s3img.vcdn.vn/123phim/2018/09/404b8c4b80d77732e7426cdb7e24be20.png"
+              />
+            </a>
+          </div>
+          <div class="row col-sm-12 col-xs-12 linePartner">
+            <a
+              target="_blank"
+              href="https://www.megagscinemas.vn"
+              title="MegaGS"
+            >
+              <img
+                class="iconConnect"
+                src="https://tix.vn/app/assets/img/icons/megags.png"
+              />
+            </a>
+            <a target="_blank" href="https://www.betacineplex.vn/" title="Beta">
+              <img
+                class="iconConnect"
+                src="https://tix.vn/app/assets/img/icons/bt.jpg"
+              />
+            </a>
+            <a target="_blank" href="http://ddcinema.vn" title="DDC">
+              <img
+                class="iconConnect"
+                src="https://tix.vn/app/assets/img/icons/dongdacinema.png"
+              />
+            </a>
+            <a
+              target="_blank"
+              href="https://touchcinema.com/"
+              title="Touch Cinema"
+            >
+              <img
+                class="iconConnect"
+                src="https://tix.vn/app/assets/img/icons/TOUCH.png"
+              />
+            </a>
+            <a target="_blank" href="https://cinemaxvn.com/" title="Cinemax">
+              <img
+                class="iconConnect"
+                src="https://tix.vn/app/assets/img/icons/cnx.jpg"
+              />
+            </a>
+          </div>
+          <div class="row col-sm-12 col-xs-12 linePartner">
+            <a target="_blank" href="http://starlight.vn/" title="Starlight">
+              <img
+                class="iconConnect"
+                src="https://tix.vn/app/assets/img/icons/STARLIGHT.png"
+              />
+            </a>
+            <a target="_blank" href="https://www.dcine.vn/" title="Dcine">
+              <img
+                class="iconConnect"
+                src="https://tix.vn/app/assets/img/icons/dcine.png"
+              />
+            </a>
+            <a target="_blank" href="https://zalopay.vn/" title="ZaloPay">
+              <img
+                class="iconConnect"
+                src="https://tix.vn/app/assets/img/icons/zalopay_icon.png"
+              />
+            </a>
+            <a target="_blank" href="https://www.payoo.vn/" title="Payoo">
+              <img
+                class="iconConnect"
+                src="https://tix.vn/app/assets/img/icons/payoo.jpg"
+              />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.vietcombank.com.vn/"
+              title="Vietcombank"
+            >
+              <img
+                class="iconConnect"
+                src="https://tix.vn/app/assets/img/icons/VCB.png"
+              />
+            </a>
+          </div>
+          <div class="row col-sm-12 col-xs-12 linePartner">
+            <a
+              target="_blank"
+              href="http://www.agribank.com.vn/"
+              title="Agribank"
+            >
+              <img
+                class="iconConnect"
+                src="https://tix.vn/app/assets/img/icons/AGRIBANK.png"
+              />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.vietinbank.vn/"
+              title="Vietinbank"
+            >
+              <img
+                class="iconConnect"
+                src="https://tix.vn/app/assets/img/icons/VIETTINBANK.png"
+              />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.indovinabank.com.vn/"
+              title="IVB"
+            >
+              <img
+                class="iconConnect"
+                src="https://tix.vn/app/assets/img/icons/IVB.png"
+              />
+            </a>
+            <a target="_blank" href="http://123go.vn" title="123Go">
+              <img
+                class="iconConnect"
+                src="https://tix.vn/app/assets/img/icons/123go.png"
+              />
+            </a>
+            <a target="_blank" href="http://laban.vn" title="La Bàn">
+              <img
+                class="iconConnect"
+                src="https://tix.vn/app/assets/img/icons/laban.png"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-4 col-xs-12">
+          <div class="col-xs-6 textCenter" style="float: left">
+            <p class="title">MOBILE APP</p>
+            <a
+              target="_blank"
+              href="https://apps.apple.com/vn/app/tix-%C4%91%E1%BA%B7t-v%C3%A9-nhanh-nh%E1%BA%A5t/id615186197"
+              title="Apple App"
+            >
+              <img
+                class="iconApp"
+                src="https://tix.vn/app/assets/img/icons/apple-logo.png"
+              />
+            </a>
+            <a
+              target="_blank"
+              href="https://play.google.com/store/apps/details?id=vn.com.vng.phim123"
+              title="Android App"
+            >
+              <img
+                class="iconApp"
+                src="https://tix.vn/app/assets/img/icons/android-logo.png"
+              />
+            </a>
+          </div>
+          <div class="col-xs-6 textCenter">
+            <p class="title hideOnMobile">SOCIAL</p>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/tix.vn/"
+              title="Facebook social"
+            >
+              <img
+                class="iconApp"
+                src="https://tix.vn/app/assets/img/icons/facebook-logo.png"
+              />
+            </a>
+            <a
+              target="_blank"
+              href="https://zalo.me/tixdatve"
+              title="Zalo social"
+            >
+              <img
+                class="iconApp"
+                src="https://tix.vn/app/assets/img/icons/zalo-logo.png"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr class="hrFooter" />
+      <div class="row">
+        <div class="col-sm-1 col-xs-12 imgFooter">
+          <img
+            class="vngIcon"
+            src="https://tix.vn/app/assets/img/icons/zion-logo.jpg"
+            style="border-radius: 8px"
+          />
+        </div>
+        <div class="col-sm-9 col-xs-12 infoFooter">
+          <span
+            >TIX – Dự án cuối khóa Lập trình Frontend [CYBERSOFT-ACADEMY]</span
+          >
+          <span>Người thực hiện : LÝ BỬU NHI</span>
+          <span
+            >Số Điện Thoại (Hotline): 0376981999<br />Email:
+            <a href="mailto:support@tix.vn" style="color: #fb4226"
+              >buunhi2703@gmail.com</a
+            ></span
+          >
+        </div>
+        <div class="col-sm-2 col-xs-12 imgFooter">
+          <a target="_blank" href="http://online.gov.vn/Home/WebDetails/62782"
+            ><img
+              class="imgBoCo"
+              alt="Bộ Công Thương"
+              title=""
+              src="https://s3img.vcdn.vn/123phim/2020/03/d1e6bd560daa9e20131ea8a0f62e87f8.png"
+          /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

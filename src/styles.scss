@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+
+.owl-prev {
+    position: absolute;
+    top: 47%;
+    left: -50px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    width: 50px;
+    height: 100px;
+    z-index: 2;
+    opacity: 0.5;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.owl-next:hover span {
+    background: none;
+}
+.owl-prev span {
+    font-size: 70px;
+    font-weight: 300;
+}
+.owl-next {
+    position: absolute;  
+    right: -50px;
+    top: 47%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    width: 50px;
+    height: 100px;
+    z-index: 2;
+    opacity: .5;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.owl-next span {
+    font-size: 70px;
+    font-weight: 300;
+}
+.owl-dots{
+    display: none;
+}
